@@ -1,0 +1,16 @@
+footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: left;
+  }
+ .ok{ text-align: center;}
+  
+ body {
+
+  background: url(restaurant.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: static;
+}
+
