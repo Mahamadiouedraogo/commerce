@@ -1,3 +1,12 @@
+<?php
+try {
+    $bdd = new PDO('mysql:host=localhost;dbname=bd_commerce', 'root', '');
+} catch (Exception $e) {
+    die('Erreur : ' . $e->getMessage());
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,17 +40,17 @@
                     </form>
                     <div class="pe-5">
                         <li class="nav-item ">
-                            <a class="nav-link active " aria-current="page" href="#Acceuil">Acceuil</a>
+                            <a class="nav-link active " aria-current="page" href="index.php">Acceuil</a>
                         </li>
                     </div>
                     <div class="pe-4">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#produit">Produit</a>
+                            <a class="nav-link active" href="admin/index.php">Produit</a>
                         </li>
                     </div>
                     <div class="pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#contact">contact</a>
+                            <a class="nav-link active" href="admin/dasboard.php">contact</a>
                         </li>
                     </div>
 
@@ -67,8 +76,7 @@
                 <div class="row g-0">
 
                     <div class="col-sm-7">
-                        <div class="card-body ps-5" >
-                            
+                        <div class="card-body ps-5">
                             Bienvenue dans notre restaurant !
 
                             Nous sommes ravis de vous accueillir et de vous offrir une expérience culinaire
@@ -113,11 +121,50 @@
                 <h3>produits</h3>
             </div>
             <hr>
-            <div class="row">
 
-                <div class="col-sm-6 ps-3">
-                    <div class="card ps-3 ">
-                        <img src="lait.jpg" class="card-img-top" style="height:50%;" alt="...">
+            <div class="row">
+               
+            <div class="row align-items-center ">
+                    <div class="col ps-5">
+                        <div class=" justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <img src="v.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="d-grid gap-2 d-md-block">
+                                    
+                                    <button class="btn btn-success" type="button">LAIT</button>
+                                    <button class="btn btn-primary" type="button">4000FCFA</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                    <div class="col ps-5">
+                        <div class="  justify-content-end">
+                        <div class="card col-md-4" style="width: 18rem;">
+                            <img src="v.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="d-grid gap-2 d-md-block">
+                                    <button class="btn btn-success" type="button">LAIT</button>
+                                    <button class="btn btn-primary" type="button">4000FCFA</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+             <hr style="color: transparent;"><br> <br> <br>
+            <div class="row">
+                <br> 
+                <div class="col ps-5">
+                    <div class=" justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="v.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <div class="d-grid gap-2 d-md-block">
                                 <button class="btn btn-success" type="button">LAIT</button>
@@ -126,45 +173,25 @@
                         </div>
                     </div>
                 </div>
-                <br>
-                <div class="col-sm-6 ps-3 ">
-                    <div class="card ps-3">
-                        <img src="sucre.jpg" class="card-img-top" style="height:50%;" alt="...">
-                        <div class="card-body">
-                            <div class="d-grid gap-2 d-md-block">
-                                <button class="btn btn-success" type="button">SUCRE</button>
-                                <button class="btn btn-primary" type="button">6500FCFA</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="col col-sm-6 ps-3">
-                    <div class="card ps-3">
-                        <img src="the.jpg" class="card-img-top" style="height:50%;" alt="...">
-                        <div class="card-body">
-                            <div class="d-grid gap-2 d-md-block">
-                                <button class="btn btn-success" type="button">THE</button>
-                                <button class="btn btn-primary" type="button">5000FCFA</button>
-                            </div>
-                        </div>
-                    </div>
-                </div> <br>
-
-                <div class="col-sm-6 ps-3">
-                    <div class="card ps-3">
-                        <img src="miel.jpg" class="card-img-top" style="height: 400px; height: 400px;" alt="...">
-                        <div class="card-body">
-
-                            <div class="d-grid gap-2 d-md-block">
-                                <button class="btn btn-success" type="button">MIEL</button>
-                                <button class="btn btn-primary" type="button">7000 FCFA</button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
             </div>
+            
+                <div class="col ps-5">
+                    <div class="  justify-content-end">
+                    <div class="card col-md-4" style="width: 18rem;">
+                        <img src="v.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-block">
+                                <button class="btn btn-success" type="button">LAIT</button>
+                                <button class="btn btn-primary" type="button">4000FCFA</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
         </div><br> <br> <br>
         <div style="color: blue; text-align: center;">
             <h3>contact</h3>

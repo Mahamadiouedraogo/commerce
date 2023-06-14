@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="..//style.css">
+    <link rel="stylesheet" href="../style.css">
     <title>longrich</title>
 </head>
 
@@ -30,17 +30,17 @@
                     </form>
                     <div class="pe-5">
                         <li class="nav-item ">
-                            <a class="nav-link active " aria-current="page" href="../index.html">Acceuil</a>
+                            <a class="nav-link active " aria-current="page" href="../index.php">Acceuil</a>
                         </li>
                     </div>
                     <div class="pe-4">
                         <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Produit</a>
+                            <a class="nav-link active" href="index.php">Produit</a>
                         </li>
                     </div>
                     <div class="pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active" href="dasboard.html">contact</a>
+                            <a class="nav-link active" href="dasboard.php">contact</a>
                         </li>
                     </div>
 
@@ -54,86 +54,31 @@
 
 
     </nav>
-
-
-
-
-
-
-
-    </header>
-    <div class="container">
-        <h3 class="fw-bold pt-5 text-center" id="acceuil">Dashboard </h3>
+    <br> <br><br> <br>
+    <div class="container text-center">
+        <a href="#connexion" class="text-center"> connexion</a>
         <hr>
-        <div class="row  pb-5 pt-4  ">
-            <div class="col-md-4 text-center d-grid gap-2 d-block offset-md-1 mb-md-0 mb-5">
+        <br> <br><br>
+        <div class="row">
 
-                <a href="#voir_liste" class="btn btn-primary mb-5 p-3"> Voir la liste des produits</a>
+            <form action="process-login.php" method="POST">
+                <label for="login">Nom d'utilisateur</label> <br>
+                <input type="email" class="col-sm-7" placeholder="votre email" id="login" name="login" required>
+                <br> <br>
+                <label for="password">Mot de passe</label> <br>
+                <input type="password" class="col-sm-7" id="password" placeholder="password" name="password" required>
+                <br> <br>
+                <input type="submit" value="Se connecter">
+            </form>
 
-                <a href="" class="btn btn-primary  mt-5  p-3">Voir la liste des ventes </a>
-
-            </div>
-            <div class="col-md-4 text-center d-grid gap-2 d-block offset-md-2 mt-md-0 mt-5">
-
-                <a href="#ajout_prod" class="btn btn-primary btn-block mb-5 p-3 "> Ajouter un produits</a>
-
-
-                <a href="" class="btn btn-primary  btn-block mt-5 p-3">Ajouter une vente</a>
-
-
-            </div>
         </div>
-        <hr>
-        <h5 class="fw-bold pb-5" id="voir_liste">Listes des Produits</h5>
+        <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $nom = $_POST["nom d'utilisateur"];
+            $password = $_POST["password"];
 
 
-
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">libellé</th>
-                    <th scope="col">Prix Unitaire</th>
-                    <th scope="col">Devise</th>
-                </tr>
-            </thead>
-
-
-
-           
-            
-        </table>
-
-        <h5 class="fw-bold pt-5" id="ajout_prod">Ajout de Produits</h5>
-
-        <hr>
-
-        <form action="a.php" method="post">
-            <div class="row pt-4">
-                <div class="col-md mb-md-0 mb-3">
-                    <div class="form-outline ">
-
-
-                        <label class="fw-bold pb-3" for="">Libellé :</label>
-                        <input type="text" id="" class="form-control" name="libelle" required />
-
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="form-outline ">
-                        <label class="fw-bold pb-3" for="">Prix :</label>
-                        <input type="text" id="" class="form-control" name="prix" required />
-
-                    </div>
-                </div>
-            </div>
-            <div class="text-center pt-4">
-                <button type="submit" class="btn btn-success btn-block mb-4 ">Enregistrer</button>
-            </div>
-
-
-    </div>
-    </form>
+        } ?>
 
     </div><br> <br><br> <br>
     <div style="color: blue; text-align: center;">
@@ -152,17 +97,10 @@
             <a href=""></a> <img src="wha.webp" class="rounded-bottom" width="50px" height="50px" alt="..."></a>
             <a href=""> <img src="google.webp" class="rounded-start" width="50px" height="50px" alt="..."></a>
             <a href=""> <img src="loca.webp" class="rounded-circle" width="50px" height="50px" alt="..."></a>
-            
+
         </div>
     </footer>
-    </div>
-    <script src="../Bootstrap/js/bootstrap.min.js"></script>
-
-
-
-
-
-
+    <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>
